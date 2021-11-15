@@ -28,7 +28,7 @@ async def users_event():
     return json.dumps({"type": "users", "count": len(connected), "uuids": organizaclientid()})
 
 def user_saiu(id_user_que_saiu):
-    return json.dumps({"type": "user_saiu", "id":id_user_que_saiu})
+    return json.dumps({"type": "user_saiu", "id":id_user_que_saiu,  "count": len(usersonline)})
     
 async def my_id(meuid):
     return json.dumps({"type": "my_id", "id":meuid})
